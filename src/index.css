@@ -71,13 +71,13 @@
   .section-underline::before {
     content: "\25C9";
     position: absolute;
-    top: -11px;
+    top: -10.5px;
     left: -5px;
   }
   .section-underline::after {
     content: "\25C9";
     position: absolute;
-    top: -11px;
+    top: -10.5px;
     right: -5px;
   }
   .hero-pic {
