@@ -71,7 +71,7 @@
   .section-underline::before {
     content: "\25C9";
     display: block;
-    transform: translate(-12px, -10px);
+    transform: translate(-6px, -10px);
   }
   .section-underline::after {
     content: "\25C9";
@@ -196,11 +196,11 @@
 }
 
 /*========== MEDIA QUERY ========== */
-/* @media screen and (min-width: 700px) and (min-height: 1000px) {
+@media screen and (min-width: 700px) and (min-height: 1000px) {
   .app-container {
     min-height: auto;
   }
-} */
+}
 @media screen and (max-width: 850px) {
   .card-container::after {
     left: 0%;
