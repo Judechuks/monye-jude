@@ -66,17 +66,19 @@
     @apply font-bold text-center text-4xl mb-4 max-sm:text-2xl;
   }
   .section-underline {
-    @apply w-20 h-1 bg-black dark:bg-white mx-auto mb-10;
+    @apply w-20 h-1 bg-black dark:bg-white mx-auto mb-10 relative;
   }
   .section-underline::before {
     content: "\25C9";
-    display: block;
-    transform: translate(-8px, -10px);
+    position: absolute;
+    top: -10px;
+    left: -5px;
   }
   .section-underline::after {
     content: "\25C9";
-    display: block;
-    transform: translate(78px, -35px);
+    position: absolute;
+    top: -10px;
+    right: -5px;
   }
   .hero-pic {
     background: linear-gradient(135deg, lightblue, blue 50%, white 50%);
