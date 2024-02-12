@@ -71,12 +71,12 @@
   .section-underline::before {
     content: "\25C9";
     display: block;
-    transform: translate(-6px, -10px);
+    transform: translate(-8px, -10px);
   }
   .section-underline::after {
     content: "\25C9";
     display: block;
-    transform: translate(78px, -34px);
+    transform: translate(78px, -35px);
   }
   .hero-pic {
     background: linear-gradient(135deg, lightblue, blue 50%, white 50%);
