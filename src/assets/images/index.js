@@ -1,4 +1,4 @@
-import heroImg from "./profilePic.jpeg";
+import heroImg from "./ProfilePic.jpeg";
 import EdufunLogo from "./EdufunTechnik.png";
 import Admin from "./admin.png";
 import EdufunCEO from "./edufun-ceo.jpg";
