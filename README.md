@@ -7,11 +7,11 @@ Welcome to my personal portfolio! This portfolio showcases my skills, projects, 
 #### TABLE OF CONTENTS
 
 - [Table of Contents](#table-of-contents)
-  - [Motivation](#motivation)
-  - [Project link](#link)
-  - [Technologies used](#technologies-used)
-  - [Installation](#installation)
-  - [Project Features](#features)
+- [Motivation](#motivation)
+- [Project link](#link)
+- [Technologies used](#technologies-used)
+- [Installation](#installation)
+- [Project Features](#features)
 
 ---
 
@@ -63,7 +63,7 @@ These technologies are easy to use and get started with.
 
 ##### React with Tailwind using Vite (Front-end)
 
-> `npm create vite@latest frontend_react -- --template react` <br> `cd my rontend_react` <br> `npm install -D tailwindcss postcss autoprefixer` <br> `npx tailwindcss init -p` <br> **Add the necessary contents in the tailwind.config.js and index.css** <br> `npm run dev` <br> `npm install react-router-dom @sanity/client @sanity/image-url react-icons swiper use-local-storage-state `
+> `npm create vite@latest frontend_react -- --template react` <br> `cd my frontend_react` <br> `npm install -D tailwindcss postcss autoprefixer` <br> `npx tailwindcss init -p` <br> **Add the necessary contents in the tailwind.config.js and index.css** <br> `npm run dev` <br> `npm install react-router-dom @sanity/client @sanity/image-url react-icons swiper use-local-storage-state `
 
 ---
 
