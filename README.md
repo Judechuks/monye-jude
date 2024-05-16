@@ -47,7 +47,7 @@ To add and populate contents on the page, for easy control and update when need 
 
 to change and store the choice of user's preferred theme
 
-##### [Swiper Js](https://www.swiperjs.com/)
+##### [Swiper Js](https://swiperjs.com/)
 
 for creating sliders and pagination
 
