@@ -97,11 +97,13 @@ export const skills = [
 
 export const otherSkills = [
   { id: 1, title: "Graphics Design" },
-  { id: 2, title: "Troubleshooting" },
+  { id: 2, title: "Teamwork" },
   { id: 3, title: "Analytical skills" },
   { id: 4, title: "Communication" },
   { id: 5, title: "Problem Solving" },
   { id: 6, title: "Creativity" },
+  { id: 6, title: "Resilience" },
+  { id: 6, title: "Emotional Intelligence" },
 ];
 
 // Projects // Handled with Sanity CMS (judechuks26@gmail.com)
