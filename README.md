@@ -17,7 +17,7 @@ Welcome to my personal portfolio! This portfolio showcases my skills, projects, 
 
 #### MOTIVATION
 
-As a result of the high and ever growing software/technology industry there is need for one to showcase his skills to meet a wider range of potential employers/collaborators. Hence the need for a personal portfoio.
+As a result of the high and ever growing software/technology industry there is need for one to showcase his skills to meet a wider range of potential employers/collaborators. Hence the need for a personal portfolio.
 
 ---
 
