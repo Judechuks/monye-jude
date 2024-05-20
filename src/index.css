@@ -232,6 +232,10 @@
   bottom: -5px;
 }
 
+.swiper-pagination-bullet {
+  background-color: blue;
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
   font-size: 1.5rem;
