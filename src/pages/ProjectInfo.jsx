@@ -70,7 +70,7 @@ const ProjectInfo = () => {
       </div>
 
       {/* Project Description */}
-      <div className="mt-6">
+      <div className="project-description mt-6">
         <h2 className="font-semibold text-xl mb-3">Description</h2>
         <ReactMarkdown>{selectedProject?.description}</ReactMarkdown>
       </div>
