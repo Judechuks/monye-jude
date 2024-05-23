@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 import { Attachment, Github } from "../assets/icons/svgIcons";
 import { useGlobalContext } from "../context";
 import { urlFor } from "../client";
@@ -13,14 +14,13 @@ const ProjectInfo = () => {
 
   useEffect(() => {
     setSelectedProject(projects.find((project) => project.id === parseInt(id)));
-  }, []);
+  }, [id]);
   console.log(selectedProject);
 
   const {
     title,
     link,
     githubLink,
-    date,
     description,
     skillIcons,
     skills,
@@ -79,7 +79,7 @@ const ProjectInfo = () => {
       {/* Project Description */}
       <div className="mt-6">
         <h2 className="font-semibold text-xl mb-3">Description</h2>
-        <p>{description}</p>
+        <ReactMarkdown>{description}</ReactMarkdown>
       </div>
       <Link
         to="/#projects"
