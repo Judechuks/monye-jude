@@ -15,7 +15,6 @@ const ProjectInfo = () => {
   useEffect(() => {
     setSelectedProject(projects.find((project) => project.id === parseInt(id)));
   }, [id]);
-  console.log(selectedProject);
 
   const {
     title,
