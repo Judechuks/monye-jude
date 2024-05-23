@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import { urlFor } from "../client";
 import { icons } from "../constants";
 
@@ -21,7 +22,9 @@ const ProjectCard = ({
         <h2 className="font-bold text-lg sm:text-xl capitalize">{title}</h2>
       </header>
       <section className="flex-1 my-6 pb-4 border-b-2 text-slate-gray">
-        <p className="">{description.substring(0, 101)}...</p>
+        <ReactMarkdown className="">
+          {description.substring(0, 101) + "..."}
+        </ReactMarkdown>
         <h4 className="mt-4">{date}</h4>
       </section>
       <footer className="pb-4 flex gap-2">
