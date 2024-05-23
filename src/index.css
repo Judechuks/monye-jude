@@ -248,3 +248,33 @@
     display: none;
   }
 }
+
+/* project description */
+.project-description h1,
+.project-description h2,
+.project-description h3,
+.project-description h4,
+.project-description h5,
+.project-description h6 {
+  margin-block: 10px;
+  font-weight: bold;
+}
+
+.project-description li {
+  list-style: auto;
+  margin-left: 20px;
+}
+.project-description li::marker {
+  font-weight: bold;
+}
+.project-description a:link {
+  text-decoration: underline;
+  color: blue;
+}
+.project-description a:visited {
+  text-decoration: underline;
+  color: blueviolet;
+}
+.project-description a:active {
+  color: red;
+}
