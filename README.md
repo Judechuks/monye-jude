@@ -53,6 +53,10 @@ for creating sliders and pagination
 
 These technologies are easy to use and get started with.
 
+##### [React Markdown](https://www.npmjs.com/package/react-markdown)
+
+for previewing markdown content on the UI
+
 ---
 
 #### INSTALLATION
@@ -64,6 +68,10 @@ These technologies are easy to use and get started with.
 ##### React with Tailwind using Vite (Front-end)
 
 > `npm create vite@latest frontend_react -- --template react` <br> `cd my frontend_react` <br> `npm install -D tailwindcss postcss autoprefixer` <br> `npx tailwindcss init -p` <br> **Add the necessary contents in the tailwind.config.js and index.css** <br> `npm run dev` <br> `npm install react-router-dom @sanity/client @sanity/image-url react-icons swiper use-local-storage-state `
+
+##### React Markdown
+
+> `npm i react-markdown`
 
 ---
 
