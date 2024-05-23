@@ -102,8 +102,8 @@ export const otherSkills = [
   { id: 4, title: "Communication" },
   { id: 5, title: "Problem Solving" },
   { id: 6, title: "Creativity" },
-  { id: 6, title: "Resilience" },
-  { id: 6, title: "Emotional Intelligence" },
+  { id: 7, title: "Resilience" },
+  { id: 8, title: "Emotional Intelligence" },
 ];
 
 // Projects // Handled with Sanity CMS (judechuks26@gmail.com)
