@@ -14,26 +14,16 @@ const ProjectInfo = () => {
 
   useEffect(() => {
     setSelectedProject(projects.find((project) => project.id === parseInt(id)));
-  }, [id]);
-
-  const {
-    title,
-    link,
-    githubLink,
-    description,
-    skillIcons,
-    skills,
-    photoGallery,
-  } = selectedProject;
+  }, [projects, id]);
 
   return (
     <section className="pt-20 pb-10 max-w-sm sm:max-w-2xl mx-auto">
-      <h1 className="section-title">{title}</h1>
+      <h1 className="section-title">{selectedProject?.title}</h1>
       <div className="section-underline"></div>
       {/* Project Links */}
       <div className="flex justify-center gap-2 font-semibold">
         <a
-          href={link}
+          href={selectedProject?.link}
           target="_blank"
           rel="noreferrer"
           className="flex gap-2 border rounded-md p-2 hover:bg-stone-500">
@@ -41,7 +31,7 @@ const ProjectInfo = () => {
           <p>View Live</p>
         </a>
         <a
-          href={githubLink}
+          href={selectedProject?.githubLink}
           target="_blank"
           rel="noreferrer"
           className="flex gap-2 border rounded-md p-2 hover:bg-stone-500">
@@ -52,11 +42,15 @@ const ProjectInfo = () => {
 
       {/* Skills */}
       <div className="flex my-6 gap-3 flex-wrap capitalize">
-        {skills?.map((skill, index) => (
+        {selectedProject?.skills?.map((skill, index) => (
           <p
             className="flex gap-2 items-center text-center px-2 py-1 border border-slate-gray rounded-lg hover:bg-slate-gray"
             key={index}>
-            <img src={urlFor(skillIcons[index])} alt={skill} className="w-5" />
+            <img
+              src={urlFor(selectedProject?.skillIcons[index])}
+              alt={skill}
+              className="w-5"
+            />
             {skill}
           </p>
         ))}
@@ -64,7 +58,7 @@ const ProjectInfo = () => {
 
       {/* Photo Gallery */}
       <div className="photo-gallery mx-auto grid gap-3 grid-col-1 sm:grid-cols-2">
-        {photoGallery?.map((photo, index) => (
+        {selectedProject?.photoGallery?.map((photo, index) => (
           <div key={index}>
             <img
               src={urlFor(photo)}
@@ -78,7 +72,7 @@ const ProjectInfo = () => {
       {/* Project Description */}
       <div className="mt-6">
         <h2 className="font-semibold text-xl mb-3">Description</h2>
-        <ReactMarkdown>{description}</ReactMarkdown>
+        <ReactMarkdown>{selectedProject?.description}</ReactMarkdown>
       </div>
       <Link
         to="/#projects"
