@@ -4,7 +4,7 @@ import { AppWrap } from "../wrapper";
 import { useEffect, useState } from "react";
 import { client, urlFor } from "../client";
 
-const Hero = () => {
+export const Hero = () => {
   const [hero, setHero] = useState({});
 
   useEffect(() => {
@@ -17,17 +17,21 @@ const Hero = () => {
   return (
     <section
       // id="home"
-      className="pt-8 pb-10 flex flex-col gap-10 sm:flex-row justify-between items-center">
+      className="pt-8 pb-10 flex flex-col gap-10 sm:flex-row justify-between items-center"
+    >
       {/* LEFT COLUMN */}
       <article className="max-sm:text-center sm:basis-1/2">
         <h4 className="text-slate-gray">Hi! Welcome to my portfolio</h4>
-        <h2 className="font-bold text-3xl leading-8 my-3">I'm {hero?.name}</h2>
+        <h2 className="font-bold text-3xl leading-8 my-3">
+          I&apos;m {hero?.name}
+        </h2>
         <p className="leading-6 text-slate-gray">{hero?.msg}</p>
         <a
           href={images.cv}
           target="_blank"
           rel="noreferrer"
-          className="w-fit max-sm:mx-auto flex gap-3 items-center border rounded-lg px-4 py-1 mt-4 font-semibold  bg-blue-800 text-white hover:border-blue-800 hover:bg-transparent hover:text-blue-800 dark:hover:border-white dark:hover:text-white duration-300">
+          className="w-fit max-sm:mx-auto flex gap-3 items-center border rounded-lg px-4 py-1 mt-4 font-semibold  bg-blue-800 text-white hover:border-blue-800 hover:bg-transparent hover:text-blue-800 dark:hover:border-white dark:hover:text-white duration-300"
+        >
           <FaEye /> My C.V
         </a>
       </article>
@@ -42,4 +46,5 @@ const Hero = () => {
     </section>
   );
 };
-export default AppWrap(Hero, "home");
+const WrappedHero = AppWrap(Hero, "home");
+export default WrappedHero;
