@@ -23,6 +23,8 @@ export default {
         "slate-gray": "#6D6D6D",
         "body-clr": "#111",
         "white-400": "rgba(255, 255, 255, 0.80)",
+        "color-secondary": "#ff7d3b",
+        "color-blob": "#a427df",
       },
       boxShadow: {
         navbar: "0 4px 5px #333",
