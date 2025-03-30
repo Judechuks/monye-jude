@@ -9,8 +9,7 @@ import {
 // exported image and icon object where every images and icons can be accessed
 import * as images from "../assets/images";
 import * as icons from "../assets/icons";
-export * as images from "../assets/images";
-export * as icons from "../assets/icons";
+export { icons, images };
 
 import {
   BusinessBag,
