@@ -24,4 +24,5 @@ const Experiences = () => {
     </section>
   );
 };
-export default AppWrap(Experiences, "experience");
+const WrappedApp = AppWrap(Experiences, "experience");
+export default WrappedApp;

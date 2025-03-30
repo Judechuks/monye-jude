@@ -21,13 +21,18 @@ export const Hero = () => {
     >
       {/* LEFT COLUMN */}
       <article className="max-sm:text-center sm:basis-1/2">
-        <h4 className="text-slate-gray">Hi! Welcome to my portfolio</h4>
+        <h4 className="text-slate-gray dark:text-gray-300">
+          Hi! Welcome to my portfolio
+        </h4>
         <h2 className="font-bold text-3xl leading-8 my-3">
           I&apos;m {hero?.name}
         </h2>
-        <p className="leading-6 text-slate-gray">{hero?.msg}</p>
+        <p className="leading-6 text-slate-gray dark:text-gray-300">
+          {hero?.msg}
+        </p>
         <a
-          href={images.cv}
+          // href={images.cv}
+          href={hero?.cv_link}
           target="_blank"
           rel="noreferrer"
           className="w-fit max-sm:mx-auto flex gap-3 items-center border rounded-lg px-4 py-1 mt-4 font-semibold  bg-blue-800 text-white hover:border-blue-800 hover:bg-transparent hover:text-blue-800 dark:hover:border-white dark:hover:text-white duration-300"

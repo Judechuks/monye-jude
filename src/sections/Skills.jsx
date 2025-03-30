@@ -34,4 +34,5 @@ const Skills = () => {
     </section>
   );
 };
-export default AppWrap(Skills, "skills");
+const WrappedApp = AppWrap(Skills, "skills");
+export default WrappedApp;

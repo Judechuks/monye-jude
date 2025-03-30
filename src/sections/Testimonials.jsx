@@ -26,7 +26,8 @@ const Testimonials = () => {
         // spaceBetween={50}
         slidesPerView={1}
         navigation
-        pagination={{ clickable: true }}>
+        pagination={{ clickable: true }}
+      >
         {reviews.map((review, index) => (
           <SwiperSlide key={index}>
             <TestimonialCard {...review} />

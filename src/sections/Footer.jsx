@@ -1,4 +1,3 @@
-import React from "react";
 import { Logo, SocialMedia } from "../components";
 import { footerLinks } from "../constants";
 
@@ -28,7 +27,8 @@ const Footer = () => {
                 {section.links.map((link) => (
                   <li
                     key={link.name}
-                    className="hover:text-slate-gray text-center">
+                    className="hover:text-slate-gray text-center"
+                  >
                     <a href={link.link}>{link.name}</a>
                   </li>
                 ))}
@@ -45,7 +45,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-12 flex justify-center cursor-pointer">
-        <p>&copy; Copyright. All rights reserved.</p>
+        <p>
+          &copy; Copyright {new Date().getFullYear()} | All rights reserved.
+        </p>
       </div>
     </footer>
   );

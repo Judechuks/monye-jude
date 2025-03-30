@@ -26,4 +26,5 @@ const Education = () => {
     </section>
   );
 };
-export default AppWrap(Education, "education");
+const WrappedApp = AppWrap(Education, "education");
+export default WrappedApp;

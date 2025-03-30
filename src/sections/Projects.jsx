@@ -40,7 +40,8 @@ const Projects = () => {
             }}
             className={`${
               item == active && "bg-blue-800 text-white "
-            } p-1 border rounded-md uppercase text-sm cursor-pointer hover:bg-blue-800 hover:text-white duration-500`}>
+            } p-1 border rounded-md uppercase text-sm cursor-pointer hover:bg-blue-800 hover:text-white duration-500`}
+          >
             {item}
           </p>
         ))}
@@ -56,4 +57,5 @@ const Projects = () => {
     </section>
   );
 };
-export default AppWrap(Projects, "projects");
+const WrappedApp = AppWrap(Projects, "projects");
+export default WrappedApp;
