@@ -7,7 +7,7 @@ import AppProvider from "./context";
 
 function App() {
   return (
-    <main className="max-container relative sm:px-8 font-montserrat dark:bg-body-clr dark:text-white">
+    <main className="max-container relative sm:px-8 font-montserrat dark:bg-color-primary dark:text-white">
       <AppProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
