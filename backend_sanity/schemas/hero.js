@@ -7,6 +7,13 @@ export default {
     {name: 'name', title: 'Name', type: 'string'},
     {name: 'imageurl', title: 'ImgURL', type: 'image', options: {hotspot: true}},
     {
+      name: 'cv_link',
+      title: 'CV Link',
+      type: 'string',
+      initialValue:
+        'https://drive.google.com/file/d/1GlWL4nLnEhH8KxzCQ8nofglTDdYy0Ur5/view?usp=sharing',
+    },
+    {
       name: 'msg',
       title: 'Intro Message',
       type: 'text',
