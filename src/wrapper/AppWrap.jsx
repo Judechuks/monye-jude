@@ -8,13 +8,6 @@ const AppWrap = (Component, idName, classNames) =>
         id={idName}
         className={`app-container relative pt-12 flex w-full items-center ${classNames}`}
       >
-        {/* blob 1 */}
-        <div className="w-80 h-80 bg-color-blob absolute top-0 -left-5 -z-10 blur-2xl opacity-10 overflow-hidden rounded-full"></div>
-        {/* blob 2 */}
-        <div className="w-80 h-80 bg-color-secondary absolute bottom-10 right-0 -z-10 blur-2xl opacity-10 overflow-hidden rounded-full"></div>
-        <div className="w-80 h-80 bg-color-blob absolute top-0 -left-5 -z-10 blur-2xl opacity-30 overflow-hidden rounded-full"></div>
-        {/* blob 2 */}
-        <div className="w-80 h-80 bg-color-secondary absolute bottom-10 right-0 -z-10 blur-2xl opacity-30 overflow-hidden rounded-full"></div>
         {/* The whole contents or components at the Middle */}
         <main className="app-wrapper flex-1">
           <Component />
