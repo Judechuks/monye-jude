@@ -14,7 +14,7 @@ const Layout = () => {
     if (theme === "dark") {
       html.classList.add("dark");
     }
-  }, []);
+  }, [theme, html]);
 
   // html.style.colorScheme = theme;
 
