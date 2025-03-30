@@ -13,7 +13,7 @@ const Missing = () => {
             sorry!
           </h1>
           <p className="text-slate-gray mb-3">
-            The page you're looking for was not found
+            The page you&aops;re looking for was not found
           </p>
           <Link to="/">
             <button className="uppercase font-bold font-montserrat py-1.5 px-6 bg-blue-800 hover:bg-blue-900 text-white rounded">
