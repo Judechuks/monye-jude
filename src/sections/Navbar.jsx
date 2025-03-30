@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
 import { Logo, Hamburger } from "../components";
 import { navLinks } from "../constants";
 import { Moon, Sun } from "../assets/icons/svgIcons";
@@ -15,14 +16,16 @@ const Navbar = ({ handleThemeSwitch, theme }) => {
         <nav
           className={`nav-menu flex-1 mobile:flex fixed top-[46px] left-0 right-0 transition-all duration-300 overflow-hidden h-0 mobile:h-fit mobile:static bg-white dark:bg-body-clr ${
             isOpen && "max-mobile:h-96"
-          }`}>
+          }`}
+        >
           <ul className="mobile:flex mobile:w-fit mx-auto">
             {navLinks.map((navLink, index) => (
               <li key={index} className="">
                 <a
                   href={navLink.href}
                   onClick={() => setIsOpen(!isOpen)}
-                  className="flex items-center gap-2 p-3 capitalize hover:bg-stone-500">
+                  className="flex items-center gap-2 p-3 capitalize hover:bg-stone-500"
+                >
                   <div className="w-4 h-4">
                     <navLink.iconUrl />
                   </div>
@@ -36,7 +39,8 @@ const Navbar = ({ handleThemeSwitch, theme }) => {
             onClick={() => {
               setIsOpen(!isOpen);
               handleThemeSwitch();
-            }}>
+            }}
+          >
             <div className="w-5 h-5">
               {theme === "dark" ? <Moon /> : <Sun />}
             </div>
@@ -46,7 +50,8 @@ const Navbar = ({ handleThemeSwitch, theme }) => {
         {/* Hamburger */}
         <div
           className="mobile:hidden cursor-pointer grid place-content-center"
-          onClick={() => setIsOpen(!isOpen)}>
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <Hamburger isOpen={isOpen} />
         </div>
       </div>
@@ -55,3 +60,9 @@ const Navbar = ({ handleThemeSwitch, theme }) => {
 };
 
 export default Navbar;
+
+// Proptypes
+Navbar.propTypes = {
+  handleThemeSwitch: PropTypes.node.isRequired,
+  theme: PropTypes.node.isRequired,
+};
