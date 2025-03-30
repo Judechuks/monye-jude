@@ -1,4 +1,4 @@
-import { NavigationDots } from "../components";
+// import { NavigationDots } from "../components";
 
 // Higher Order Component (HOC)
 const AppWrap = (Component, idName, classNames) =>
@@ -6,7 +6,12 @@ const AppWrap = (Component, idName, classNames) =>
     return (
       <section
         id={idName}
-        className={`app-container pt-12 flex w-full items-center ${classNames}`}>
+        className={`app-container relative pt-12 flex w-full items-center ${classNames}`}
+      >
+        {/* blob 1 */}
+        <div className="w-80 h-80 bg-color-blob absolute top-0 -left-5 -z-10 blur-2xl opacity-30 overflow-hidden rounded-full"></div>
+        {/* blob 2 */}
+        <div className="w-80 h-80 bg-color-secondary absolute bottom-10 right-0 -z-10 blur-2xl opacity-30 overflow-hidden rounded-full"></div>
         {/* The whole contents or components at the Middle */}
         <main className="app-wrapper flex-1">
           <Component />
