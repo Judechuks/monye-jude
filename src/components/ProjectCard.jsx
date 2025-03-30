@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import ReactMarkdown from "react-markdown";
 import { urlFor } from "../client";
 import { icons } from "../constants";
@@ -46,3 +47,12 @@ const ProjectCard = ({
   );
 };
 export default ProjectCard;
+
+ProjectCard.propTypes = {
+  title: PropTypes.node.isRequired,
+  imageurl: PropTypes.node.isRequired,
+  date: PropTypes.node.isRequired,
+  description: PropTypes.node.isRequired,
+  skillIcons: PropTypes.node.isRequired,
+  bgcolor: PropTypes.node.isRequired,
+};

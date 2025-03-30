@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { navLinks } from "../constants";
 
 const NavigationDots = ({ active }) => {
@@ -16,3 +17,7 @@ const NavigationDots = ({ active }) => {
   );
 };
 export default NavigationDots;
+
+NavigationDots.propTypes = {
+  active: PropTypes.node.isRequired,
+};

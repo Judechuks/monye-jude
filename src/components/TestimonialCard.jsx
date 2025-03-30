@@ -1,5 +1,6 @@
+import PropTypes from "prop-types";
 import { FaStar } from "react-icons/fa";
-import { images, generateRating } from "../constants";
+import { generateRating } from "../constants";
 import { urlFor } from "../client";
 
 const TestimonialCard = ({
@@ -43,3 +44,12 @@ const TestimonialCard = ({
   );
 };
 export default TestimonialCard;
+
+TestimonialCard.propTypes = {
+  name: PropTypes.node.isRequired,
+  imageurl: PropTypes.node.isRequired,
+  position: PropTypes.node.isRequired,
+  feedback: PropTypes.node.isRequired,
+  rating: PropTypes.node.isRequired,
+  bgcolor: PropTypes.node.isRequired,
+};

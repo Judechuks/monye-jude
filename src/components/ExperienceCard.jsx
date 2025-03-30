@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Company, Location, Hourglass } from "../assets/icons/svgIcons";
 
 const ExperienceCard = ({
@@ -66,6 +67,18 @@ const ExperienceCard = ({
   );
 };
 export default ExperienceCard;
+
+ExperienceCard.propTypes = {
+  id: PropTypes.node.isRequired,
+  company: PropTypes.node.isRequired,
+  location: PropTypes.node.isRequired,
+  type: PropTypes.node.isRequired,
+  position: PropTypes.node.isRequired,
+  period: PropTypes.node.isRequired,
+  description: PropTypes.node.isRequired,
+  skills: PropTypes.node.isRequired,
+  bgcolor: PropTypes.node.isRequired,
+};
 
 {
   /* Design 1: hover for info */

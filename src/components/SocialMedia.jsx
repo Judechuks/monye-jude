@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { socialMedia } from "../constants";
 
 const SocialMedia = ({ col }) => {
@@ -7,7 +7,8 @@ const SocialMedia = ({ col }) => {
       {socialMedia.map((icon, index) => (
         <a href={icon.link} key={index}>
           <div
-            className={`flex justify-center items-center w-9 h-9 bg-blue-400 rounded-full transition-transform hover:-translate-y-1 duration-500`}>
+            className={`flex justify-center items-center w-9 h-9 bg-blue-400 rounded-full transition-transform hover:-translate-y-1 duration-500`}
+          >
             {icon.faName}
           </div>
         </a>
@@ -16,3 +17,7 @@ const SocialMedia = ({ col }) => {
   );
 };
 export default SocialMedia;
+
+SocialMedia.propTypes = {
+  col: PropTypes.node.isRequired,
+};

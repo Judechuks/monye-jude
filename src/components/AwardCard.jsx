@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Company, Hourglass, Location } from "../assets/icons/svgIcons";
 
 const AwardCard = ({
@@ -53,3 +54,13 @@ const AwardCard = ({
 };
 
 export default AwardCard;
+
+AwardCard.propTypes = {
+  institution: PropTypes.node.isRequired,
+  title: PropTypes.node.isRequired,
+  by: PropTypes.node.isRequired,
+  location: PropTypes.node.isRequired,
+  date: PropTypes.node.isRequired,
+  description: PropTypes.node.isRequired,
+  bgcolor: PropTypes.node.isRequired,
+};

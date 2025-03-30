@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { companyAlt } from "../assets/icons";
 import { urlFor } from "../client";
 
@@ -51,3 +52,14 @@ const EducationCard = ({
   );
 };
 export default EducationCard;
+
+EducationCard.propTypes = {
+  id: PropTypes.node.isRequired,
+  imageurl: PropTypes.node.isRequired,
+  certification: PropTypes.node.isRequired,
+  institution: PropTypes.node.isRequired,
+  location: PropTypes.node.isRequired,
+  period: PropTypes.node.isRequired,
+  skills: PropTypes.node.isRequired,
+  bgcolor: PropTypes.node.isRequired,
+};

@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const Button = ({
   label,
@@ -14,7 +14,8 @@ const Button = ({
         bgColor ? bgColor + " hover:text-white" : "bg-blue-800"
       } ${textColor ? textColor : "text-white"} ${
         borderColor ? borderColor : "border-blue-800"
-      } ${fullWidth && "w-full"}`}>
+      } ${fullWidth && "w-full"}`}
+    >
       {label}
       {iconURL && (
         <img
@@ -27,3 +28,12 @@ const Button = ({
   );
 };
 export default Button;
+
+Button.propTypes = {
+  label: PropTypes.node.isRequired,
+  iconURL: PropTypes.node.isRequired,
+  bgColor: PropTypes.node.isRequired,
+  borderColor: PropTypes.node.isRequired,
+  textColor: PropTypes.node.isRequired,
+  fullWidth: PropTypes.node.isRequired,
+};
