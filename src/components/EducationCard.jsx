@@ -18,9 +18,13 @@ const EducationCard = ({
           <img src={urlFor(imageurl)} alt={institution} className="w-20 h-12" />
         </header>
         <section className="mb-4">
-          <h4 className="font-bold text-slate-gray">{certification}</h4>
-          <h5 className="text-slate-gray leading-6 my-2">{institution}</h5>
-          <h6 className="font-semibold text-slate-gray">
+          <h4 className="font-bold text-slate-gray dark:text-white-400">
+            {certification}
+          </h4>
+          <h5 className="text-slate-gray dark:text-white-400 leading-6 my-2">
+            {institution}
+          </h5>
+          <h6 className="font-semibold text-slate-gray dark:text-white-400">
             {location} - {period}
           </h6>
         </section>
@@ -28,14 +32,16 @@ const EducationCard = ({
           {skills.map((skill, index) => (
             <span
               key={index}
-              className="min-w-12 text-center px-2 py-1 border border-slate-gray rounded-lg hover:bg-slate-gray">
+              className="min-w-12 text-center px-2 py-1 border border-slate-gray rounded-lg hover:bg-slate-gray"
+            >
               {skill}
             </span>
           ))}
         </footer>
         {/* Overlay background effect */}
         <div
-          className={`overlay-bg absolute top-0 left-0 bottom-0 right-0 rounded-full scale-0 duration-500 ${bgcolor} group-hover:opacity-0`}></div>
+          className={`overlay-bg absolute top-0 left-0 bottom-0 right-0 rounded-full scale-0 duration-500 ${bgcolor} group-hover:opacity-0`}
+        ></div>
       </div>
       {/* circle */}
       <div className={`circle size-8 absolute rounded-full bg-blue-400`}>

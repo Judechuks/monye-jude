@@ -12,7 +12,8 @@ const ProjectCard = ({
 }) => {
   return (
     <article
-      className={`group overflow-hidden relative rounded-lg border-2 border-text-gray p-3 duration-500 cursor-pointer`}>
+      className={`card group overflow-hidden relative rounded-lg border-2 border-text-gray p-3 duration-500 cursor-pointer`}
+    >
       <img
         src={urlFor(imageurl)}
         alt="project thumbnail"
@@ -21,7 +22,7 @@ const ProjectCard = ({
       <header className="mt-2 pb-4 border-b-2">
         <h2 className="font-bold text-lg sm:text-xl capitalize">{title}</h2>
       </header>
-      <section className="flex-1 my-6 pb-4 border-b-2 text-slate-gray">
+      <section className="flex-1 my-6 pb-4 border-b-2 text-slate-gray dark:text-white-400">
         <ReactMarkdown className="">
           {description.substring(0, 101) + "..."}
         </ReactMarkdown>
@@ -31,14 +32,16 @@ const ProjectCard = ({
         {skillIcons.map((skillsIcon, index) => (
           <div
             key={index}
-            className="w-8 h-8 border rounded-md p-1 hover:bg-stone-500">
+            className="w-8 h-8 border rounded-md p-1 hover:bg-stone-500"
+          >
             <img src={urlFor(skillsIcon)} className="w-full" />
           </div>
         ))}
       </footer>
       {/* Overlay background effect */}
       <div
-        className={`overlay-bg absolute top-0 left-0 bottom-0 right-0 rounded-full scale-0 duration-500 ${bgcolor} group-hover:opacity-0`}></div>
+        className={`overlay-bg absolute top-0 left-0 bottom-0 right-0 rounded-full scale-0 duration-500 ${bgcolor} group-hover:opacity-0`}
+      ></div>
     </article>
   );
 };

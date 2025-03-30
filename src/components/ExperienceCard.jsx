@@ -15,7 +15,7 @@ const ExperienceCard = ({
     <article className="group min-[850px]:w-[50%] dark:before:border-white relative">
       <div className="card py-6 px-5 rounded-lg border-2 border-text-gray relative overflow-hidden transition duration-500 cursor-pointer">
         <h4 className="font-bold text-md mb-3">{position}</h4>
-        <header className="relative grid gap-1 text-slate-gray">
+        <header className="relative grid gap-1 text-slate-gray dark:text-white-400">
           <span className="flex items-center gap-3 border-slate-gray p-[6px]">
             <div className="size-5 -ml-2">
               <Company />
@@ -36,21 +36,27 @@ const ExperienceCard = ({
           </span>
         </header>
         <section className="my-3">
-          <h4 className="font-bold text-slate-gray">{period}</h4>
-          <p className="text-slate-gray leading-6 mt-2">{description}</p>
+          <h4 className="font-bold text-slate-gray dark:text-white-400">
+            {period}
+          </h4>
+          <p className="text-slate-gray dark:text-white-400 leading-6 mt-2">
+            {description}
+          </p>
         </section>
         <footer className="flex gap-1">
           {skills.map((skill, index) => (
             <span
               key={index}
-              className="min-w-12 text-center px-2 py-1 border border-slate-gray rounded-lg hover:bg-slate-gray">
+              className="min-w-12 text-center px-2 py-1 border border-slate-gray rounded-lg hover:bg-slate-gray"
+            >
               {skill}
             </span>
           ))}
         </footer>
         {/* Overlay background effect */}
         <div
-          className={`overlay-bg absolute top-0 left-0 bottom-0 right-0 rounded-full scale-0 duration-500 ${bgcolor} group-hover:opacity-0`}></div>
+          className={`overlay-bg absolute top-0 left-0 bottom-0 right-0 rounded-full scale-0 duration-500 ${bgcolor} group-hover:opacity-0`}
+        ></div>
       </div>
       {/* circle */}
       <div className={`circle size-8 absolute rounded-full bg-blue-400`}>
