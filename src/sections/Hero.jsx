@@ -21,15 +21,6 @@ export const Hero = () => {
     >
       {/* LEFT COLUMN */}
       <article className="max-sm:text-center sm:basis-1/2">
-        <h4 className="text-slate-gray dark:text-gray-300">
-          Hi! Welcome to my portfolio
-        </h4>
-        <h2 className="font-bold text-3xl leading-8 my-3">
-          I&apos;m {hero?.name}
-        </h2>
-        <p className="leading-6 text-slate-gray dark:text-gray-300">
-          {hero?.msg}
-        </p>
         <h4 className="text-slate-gray">Hi! Welcome to my portfolio</h4>
         <h2 className="font-bold text-3xl leading-8 my-3">
           I&apos;m {hero?.name}
