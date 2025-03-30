@@ -179,6 +179,12 @@
 .photo-gallery img {
   height: 200px;
 }
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
 
 /*========== ANIMATION ========== */
 @keyframes spread {
@@ -224,6 +230,30 @@
   }
   .card-container .group:nth-child(odd) .circle {
     left: -15px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .card-container::after,
+  .card-container .circle {
+    display: none;
+  }
+  .card-container .group:nth-child(odd) .card,
+  .card-container .group:nth-child(even) .card {
+    margin-right: 0;
+    margin-left: 0px;
+  }
+  .card-container .group:nth-child(odd):before,
+  .card-container .group:nth-child(even):before {
+    left: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+  }
+  .group:has(.card) {
+    margin-bottom: 30px;
+  }
+  .card-container .group:nth-child(odd) .circle,
+  .card-container .group:nth-child(even) .circle {
+    left: 0px;
   }
 }
 
