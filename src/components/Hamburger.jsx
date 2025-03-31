@@ -13,5 +13,5 @@ const Hamburger = ({ isOpen }) => {
 export default Hamburger;
 
 Hamburger.propTypes = {
-  isOpen: PropTypes.node.isRequired,
+  isOpen: PropTypes.bool.isRequired,
 };

@@ -55,7 +55,7 @@ export default EducationCard;
 
 EducationCard.propTypes = {
   id: PropTypes.node.isRequired,
-  imageurl: PropTypes.node.isRequired,
+  imageurl: PropTypes.object.isRequired,
   certification: PropTypes.node.isRequired,
   institution: PropTypes.node.isRequired,
   location: PropTypes.node.isRequired,

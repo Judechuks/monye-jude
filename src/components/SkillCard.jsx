@@ -26,6 +26,6 @@ export default SkillCard;
 
 SkillCard.propTypes = {
   skill: PropTypes.node.isRequired,
-  imageurl: PropTypes.node.isRequired,
+  imageurl: PropTypes.object.isRequired,
   bgcolor: PropTypes.node.isRequired,
 };

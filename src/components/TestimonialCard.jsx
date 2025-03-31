@@ -47,7 +47,7 @@ export default TestimonialCard;
 
 TestimonialCard.propTypes = {
   name: PropTypes.node.isRequired,
-  imageurl: PropTypes.node.isRequired,
+  imageurl: PropTypes.object.isRequired,
   position: PropTypes.node.isRequired,
   feedback: PropTypes.node.isRequired,
   rating: PropTypes.node.isRequired,

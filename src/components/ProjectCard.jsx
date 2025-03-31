@@ -50,9 +50,9 @@ export default ProjectCard;
 
 ProjectCard.propTypes = {
   title: PropTypes.node.isRequired,
-  imageurl: PropTypes.node.isRequired,
+  imageurl: PropTypes.object.isRequired,
   date: PropTypes.node.isRequired,
   description: PropTypes.node.isRequired,
-  skillIcons: PropTypes.node.isRequired,
+  skillIcons: PropTypes.array.isRequired,
   bgcolor: PropTypes.node.isRequired,
 };
