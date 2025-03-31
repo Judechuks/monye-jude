@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ProjectCard } from "../components";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../context/globalContext";
 import { AppWrap } from "../wrapper";
 // import { projects } from "../constants";
 
