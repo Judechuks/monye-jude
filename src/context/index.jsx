@@ -1,7 +1,8 @@
-import { useEffect, useState, createContext, useContext } from "react";
+import { useEffect, useState, createContext } from "react";
+import PropTypes from "prop-types";
 import { client } from "../client";
 
-const AppContext = createContext();
+export const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
@@ -21,14 +22,15 @@ const AppProvider = ({ children }) => {
         projects,
         portfolioProjects,
         setPortfolioProjects,
-      }}>
+      }}
+    >
       {children}
     </AppContext.Provider>
   );
 };
 
-export const useGlobalContext = () => {
-  return useContext(AppContext);
-};
-
 export default AppProvider;
+
+AppProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
