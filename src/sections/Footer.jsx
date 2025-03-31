@@ -41,7 +41,7 @@ const Footer = () => {
           <h4 className="font-montserrat font-semibold text-xl leading-normal mb-2 text-center">
             Social Media Handles
           </h4>
-          <SocialMedia />
+          <SocialMedia col={false} />
         </div>
       </div>
       <div className="mt-12 flex justify-center cursor-pointer">
