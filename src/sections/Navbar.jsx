@@ -63,6 +63,6 @@ export default Navbar;
 
 // Proptypes
 Navbar.propTypes = {
-  handleThemeSwitch: PropTypes.node.isRequired,
+  handleThemeSwitch: PropTypes.func,
   theme: PropTypes.node.isRequired,
 };
