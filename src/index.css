@@ -63,7 +63,7 @@
     flex-wrap: wrap;
   }
   .section-title {
-    @apply font-bold text-center text-4xl mb-4 max-sm:text-2xl;
+    @apply font-bold text-center text-[2rem] mb-4 max-sm:text-2xl;
   }
   .section-underline {
     @apply w-20 h-1 bg-black dark:bg-white mx-auto mb-10 relative;
