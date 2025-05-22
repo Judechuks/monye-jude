@@ -2,6 +2,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useRef } from "react";
+import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
 
@@ -11,10 +12,23 @@ const Contact = () => {
   const TEMPLATE_ID = import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATE_ID;
   const PUBLIC_KEY = import.meta.env.VITE_REACT_APP_EMAILJS_PUBLIC_KEY;
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
   const titleOfForm = "My Portfolio Contact Form";
   // This will be used to collect the date and time of submission
   const dateAndTimeOfSubmission = new Date().toLocaleString();
 
+  // This function will be called when the form is submitted which then calls the sendEmail function for emailjs to handle the submission
+  function submit(data, e) {
+    console.log(data);
+    sendEmail(e);
+  }
+
+  // for emailjs to handle form submission
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -45,7 +59,8 @@ const Contact = () => {
           reach out for gigs, job opportunities, inquiries, or just to say
           hello. I look forward to connecting with you!
         </p>
-        <form ref={form} onSubmit={sendEmail}>
+        {/* <form ref={form} onSubmit={sendEmail}> */}
+        <form ref={form} onSubmit={handleSubmit((data, e) => submit(data, e))}>
           <article className="flex flex-col gap-5">
             <div>
               <label htmlFor="name" className="w-fit cursor-pointer">
@@ -55,8 +70,19 @@ const Contact = () => {
                 type="text"
                 name="name"
                 id="name"
-                className={`p-2 border block mt-2 w-full rounded-md  focus:outline-none focus:ring-2 focus:ring-blue-700 dark:bg-black`}
+                placeholder="Your Name"
+                {...register("name", {
+                  required: "Your name is required",
+                })}
+                className={`p-2 border block mt-2 w-full rounded-md ${
+                  errors.name ? "border-red-500" : "border-gray-300"
+                } focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-blue-700 dark:bg-black`}
               />
+              {errors.name && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.name.message}
+                </p>
+              )}
             </div>
             <div>
               <label htmlFor="email" className="w-fit cursor-pointer">
@@ -67,8 +93,18 @@ const Contact = () => {
                 id="email"
                 name="email"
                 placeholder="Your Email"
-                className={`p-2 border block mt-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700 dark:bg-black`}
+                {...register("email", {
+                  required: "Your email is required",
+                })}
+                className={`p-2 border block mt-2 w-full rounded-md ${
+                  errors.email ? "border-red-500" : "border-gray-300"
+                } focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-blue-700 dark:bg-black`}
               />
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.email.message}
+                </p>
+              )}
             </div>
             <div>
               <label htmlFor="message" className="w-fit cursor-pointer">
@@ -79,11 +115,21 @@ const Contact = () => {
                 name="message"
                 id="message"
                 placeholder="Your Message"
-                className={`p-2 border block mt-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700 dark:bg-black resize-none`}
+                {...register("message", {
+                  required: "You have not written any message",
+                })}
+                className={`p-2 border block mt-2 w-full rounded-md ${
+                  errors.message ? "border-red-500" : "border-gray-300"
+                } focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-blue-700 dark:bg-black resize-none`}
               ></textarea>
+              {errors.message && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.message.message}
+                </p>
+              )}
             </div>
           </article>
-          {/* hidden Inputs to collect the title of the form, and the date and time of submission */}
+          {/* hidden inputs to collect the title of the form, and the date and time of submission */}
           <article>
             <input type="hidden" name="title" value={titleOfForm} />
             <input type="hidden" name="time" value={dateAndTimeOfSubmission} />
@@ -96,7 +142,7 @@ const Contact = () => {
           </button>
         </form>
       </article>
-      add
+
       {/* Sonner - For a toast notification */}
       <Toaster
         position="top-right"
@@ -104,6 +150,7 @@ const Contact = () => {
         toastOptions={
           {
             // className: "bg-blue-800 text-white",
+            // duration: 5000, // speed of the toast before it disappears
           }
         }
       />
