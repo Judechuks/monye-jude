@@ -37,6 +37,18 @@ const ToastExample = () => {
               description: "This is a description",
               icon: <img src={logo} alt="logo" className="w-6 h-6" />,
             });
+            toast.success("Submitted!", {
+              description: "Your message has been sent successfully.",
+              background: "#4caf50",
+              icon: <img src="/path/to/success-icon.png" alt="Success" />,
+
+              iconTheme: {
+                primary: "#4caf50",
+                secondary: "#fff",
+              },
+              // icon: <img src={images.logo} alt="logo" className="w-6 h-6" />,
+              // icon: <FaCheckCircle className="text-white" />,
+            });
             setTimeout(() => {
               toast.dismiss();
               toast.success("Hello World!", {
