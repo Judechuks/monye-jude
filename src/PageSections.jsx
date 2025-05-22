@@ -6,6 +6,7 @@ import {
   Education,
   Testimonials,
   Award,
+  Contact,
 } from "./sections";
 
 const Sections = () => {
@@ -18,6 +19,7 @@ const Sections = () => {
       <Education />
       <Award />
       <Testimonials />
+      <Contact />
     </>
   );
 };
