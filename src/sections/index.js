@@ -7,6 +7,7 @@ export { default as Education } from "./Education";
 export { default as Award } from "./Award";
 export { default as Testimonials } from "./Testimonials";
 export { default as Footer } from "./Footer";
+export { default as Contact } from "./Contact";
 
 // export {
 //   Navbar,
