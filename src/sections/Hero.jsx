@@ -31,7 +31,7 @@ export const Hero = () => {
           href={hero?.cv_link}
           target="_blank"
           rel="noreferrer"
-          className="w-fit max-sm:mx-auto flex gap-3 items-center border rounded-lg px-4 py-1 mt-4 font-semibold  bg-blue-800 text-white hover:border-blue-800 hover:bg-transparent hover:text-blue-800 dark:hover:border-white dark:hover:text-white duration-300"
+          className="w-fit max-sm:mx-auto flex gap-3 items-center border rounded-lg px-4 py-2 mt-4 font-semibold  bg-blue-800 text-white hover:border-blue-800 hover:bg-transparent hover:text-blue-800 dark:hover:border-white dark:hover:text-white duration-300"
         >
           <FaEye /> My C.V
         </a>
