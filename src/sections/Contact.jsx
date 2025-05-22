@@ -6,10 +6,6 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
 
-console.log(import.meta.env.VITE_REACT_APP_EMAILJS_SERVICE_ID);
-console.log(import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATE_ID);
-console.log(import.meta.env.VITE_REACT_APP_EMAILJS_PUBLIC_KEY);
-
 const Contact = () => {
   const form = useRef();
   const SERVICE_ID = import.meta.env.VITE_REACT_APP_EMAILJS_SERVICE_ID;
