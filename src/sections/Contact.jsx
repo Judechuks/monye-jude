@@ -76,7 +76,7 @@ const Contact = () => {
                 })}
                 className={`p-2 border block mt-2 w-full rounded-md ${
                   errors.name ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-blue-700 dark:bg-black`}
+                } focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-blue-700 bg-transparent`}
               />
               {errors.name && (
                 <p className="text-red-500 text-sm mt-1">
@@ -98,7 +98,7 @@ const Contact = () => {
                 })}
                 className={`p-2 border block mt-2 w-full rounded-md ${
                   errors.email ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-blue-700 dark:bg-black`}
+                } focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-blue-700 bg-transparent`}
               />
               {errors.email && (
                 <p className="text-red-500 text-sm mt-1">
@@ -120,7 +120,7 @@ const Contact = () => {
                 })}
                 className={`p-2 border block mt-2 w-full rounded-md ${
                   errors.message ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-blue-700 dark:bg-black resize-none`}
+                } focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-blue-700 bg-transparent resize-none`}
               ></textarea>
               {errors.message && (
                 <p className="text-red-500 text-sm mt-1">
