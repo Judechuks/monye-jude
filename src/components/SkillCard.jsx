@@ -2,8 +2,6 @@ import PropTypes from "prop-types";
 import { urlFor } from "../client";
 
 const SkillCard = ({ skill, imageurl, bgcolor }) => {
-  console.log("skill bgcolor:", bgcolor);
-
   return (
     <div
       className={`${bgcolor} skills group relative z-30 cursor-pointer h-12 overflow-hidden transition-all duration-700`}
@@ -12,7 +10,8 @@ const SkillCard = ({ skill, imageurl, bgcolor }) => {
         {skill}
       </p>
       <img
-        src={urlFor(imageurl)}
+        // src={urlFor(imageurl)}
+        src={imageurl}
         alt={"icon"}
         className="w-full h-12 absolute z-10 -top-1 -right-[45%] group-hover:-right-[42%] transition-all duration-700"
       />
