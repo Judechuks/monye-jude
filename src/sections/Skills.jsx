@@ -5,7 +5,9 @@ import { client } from "../client";
 import { AppWrap } from "../wrapper";
 
 const Skills = () => {
-  const [skills, setSkills] = useState([]);
+  // const [skills, setSkills] = useState([]);
+  const [skills, setSkills] = useState(skills);
+  console.log("skills:", skills);
 
   useEffect(() => {
     // const query = '*[_type == "skills"]';
