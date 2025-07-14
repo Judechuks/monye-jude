@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { urlFor } from "../client";
 
 const SkillCard = ({ skill, imageurl, bgcolor }) => {
-  console.log("bgcolor:", bgcolor);
+  console.log("skill bgcolor:", bgcolor);
 
   return (
     <div
