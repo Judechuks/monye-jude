@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SkillCard } from "../components";
-import { otherSkills } from "../constants";
+import { otherSkills, skills } from "../constants";
 import { client } from "../client";
 import { AppWrap } from "../wrapper";
 
@@ -8,9 +8,10 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "skills"]';
-    client.fetch(query).then((data) => setSkills(data));
-  }, []);
+    // const query = '*[_type == "skills"]';
+    // client.fetch(query).then((data) => setSkills(data));
+    setSkills(skills);
+  }, [skills]);
 
   return (
     <section className="pt-24 pb-10">
