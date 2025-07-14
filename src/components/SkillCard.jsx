@@ -10,8 +10,7 @@ const SkillCard = ({ skill, imageurl, bgcolor }) => {
         {skill}
       </p>
       <img
-        // src={urlFor(imageurl)}
-        src={imageurl}
+        src={urlFor(imageurl)}
         alt={"icon"}
         className="w-full h-12 absolute z-10 -top-1 -right-[45%] group-hover:-right-[42%] transition-all duration-700"
       />
