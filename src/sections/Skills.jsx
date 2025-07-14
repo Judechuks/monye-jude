@@ -1,19 +1,18 @@
 import { useEffect, useState } from "react";
 import { SkillCard } from "../components";
-import { otherSkills, skills } from "../constants";
+import { otherSkills, skills as myskills } from "../constants";
 import { client } from "../client";
 import { AppWrap } from "../wrapper";
 
 const Skills = () => {
-  // const [skills, setSkills] = useState([]);
-  const [skills, setSkills] = useState(skills);
+  const [skills, setSkills] = useState([]);
   console.log("skills:", skills);
 
   useEffect(() => {
     // const query = '*[_type == "skills"]';
     // client.fetch(query).then((data) => setSkills(data));
-    setSkills(skills);
-  }, [skills]);
+    setSkills(myskills);
+  }, []);
 
   return (
     <section className="pt-24 pb-10">
