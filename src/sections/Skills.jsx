@@ -5,7 +5,8 @@ import { client } from "../client";
 import { AppWrap } from "../wrapper";
 
 const Skills = () => {
-  const [skills, setSkills] = useState([]);
+  // const [skills, setSkills] = useState([]);
+  const [skills, setSkills] = useState(myskills);
   console.log("skills:", skills);
 
   useEffect(() => {
@@ -19,7 +20,7 @@ const Skills = () => {
       <h1 className="section-title">Skills</h1>
       <div className="section-underline"></div>
       <article className="grid max-[380px]:grid-cols-1 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-        {skills.map((skill) => (
+        {skills?.map((skill) => (
           <SkillCard key={skill.id} {...skill} />
         ))}
       </article>
