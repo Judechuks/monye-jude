@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react";
 import { SkillCard } from "../components";
-import { otherSkills, skills as myskills } from "../constants";
+import { otherSkills } from "../constants";
 import { client } from "../client";
 import { AppWrap } from "../wrapper";
 
 const Skills = () => {
-  // const [skills, setSkills] = useState([]);
-  const [skills, setSkills] = useState(myskills);
-  console.log("skills:", skills);
+  const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    // const query = '*[_type == "skills"]';
-    // client.fetch(query).then((data) => setSkills(data));
-    setSkills(myskills);
+    const query = '*[_type == "skills"]';
+    client.fetch(query).then((data) => setSkills(data));
   }, []);
 
   return (
