@@ -142,7 +142,7 @@ export const skills = [
     title: "MongoDB",
     imageurl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    bgColor: "bg-[#13AA52]",
+    bgColor: "bg-[#13aa52]",
   },
   {
     id: 14,
