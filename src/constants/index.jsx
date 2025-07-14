@@ -47,85 +47,108 @@ export const skills = [
   {
     id: 1,
     title: "HTML",
-    imageurl: icons.htmlIcon,
+    // imageurl: icons.htmlIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     bgColor: "bg-[#FC490B]",
   },
   {
     id: 2,
     title: "CSS",
-    imageurl: icons.cssIcon,
+    // imageurl: icons.cssIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     bgColor: "bg-[#2A7EBD]",
   },
   {
     id: 3,
     title: "Bootstrap",
-    imageurl: icons.bootstrapIcon,
+    // imageurl: icons.bootstrapIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     bgColor: "bg-[#8311FA]",
   },
   {
     id: 4,
     title: "TailwindCSS",
-    imageurl: icons.tailwindIcon,
+    // imageurl: icons.tailwindIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
     bgColor: "bg-[#16BECB]",
   },
   {
     id: 5,
     title: "Sass",
-    imageurl: icons.sassIcon,
+    // imageurl: icons.sassIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     bgColor: "bg-[#CD6799]",
   },
   {
     id: 6,
     title: "Javascript",
-    imageurl: icons.javascriptIcon,
+    // imageurl: icons.javascriptIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     bgColor: "bg-[#F7E018]",
   },
   {
     id: 7,
     title: "Reactjs",
-    imageurl: icons.reactIcon,
+    // imageurl: icons.reactIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     bgColor: "bg-[#00bcd4]",
   },
   {
     id: 8,
     title: "Git and Github",
-    imageurl: icons.reactIcon,
+    // imageurl: icons.reactIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
     bgColor: "bg-[#FE5F0B]",
   },
   {
     id: 9,
     title: "Redux Toolkit",
-    imageurl: icons.reactIcon,
+    // imageurl: icons.reactIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     bgColor: "bg-[#]",
   },
   {
     id: 10,
     title: "MySQL",
-    imageurl: icons.reactIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     bgColor: "bg-[#FE5F0B]",
   },
   {
     id: 11,
     title: "SQL",
-    imageurl: icons.reactIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/sql-original.svg",
     bgColor: "bg-[#008ef3]",
   },
   {
     id: 12,
     title: "Python",
-    imageurl: icons.reactIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     bgColor: "bg-[#005b9c]",
   },
   {
     id: 13,
     title: "MongoDB",
-    imageurl: icons.reactIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     bgColor: "bg-[#13AA52]",
   },
   {
     id: 14,
     title: "NodeJS",
-    imageurl: icons.reactIcon,
+    imageurl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     bgColor: "bg-[#96f300]",
   },
 ];
