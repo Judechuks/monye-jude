@@ -92,6 +92,42 @@ export const skills = [
     iconUrl: icons.gitIcon,
     bgColor: "bg-[#FE5F0B]",
   },
+  {
+    id: 9,
+    title: "Redux Toolkit",
+    iconUrl: icons.gitIcon,
+    bgColor: "bg-[#]",
+  },
+  {
+    id: 10,
+    title: "MySQL",
+    iconUrl: icons.gitIcon,
+    bgColor: "bg-[#FE5F0B]",
+  },
+  {
+    id: 11,
+    title: "SQL",
+    iconUrl: icons.gitIcon,
+    bgColor: "bg-[#008ef3]",
+  },
+  {
+    id: 12,
+    title: "Python",
+    iconUrl: icons.gitIcon,
+    bgColor: "bg-[#005b9c]",
+  },
+  {
+    id: 13,
+    title: "MongoDB",
+    iconUrl: icons.gitIcon,
+    bgColor: "bg-[#13AA52]",
+  },
+  {
+    id: 14,
+    title: "NodeJS",
+    iconUrl: icons.gitIcon,
+    bgColor: "bg-[#96f300]",
+  },
 ];
 
 export const otherSkills = [
