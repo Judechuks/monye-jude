@@ -10,8 +10,7 @@ const SkillCard = ({ skill, imageurl, bgcolor }) => {
         {skill}
       </p>
       <img
-        // src={urlFor(imageurl)}
-        src={imageurl}
+        src={urlFor(imageurl)}
         alt={"icon"}
         className="w-full h-12 absolute z-10 -top-1 -right-[45%] group-hover:-right-[42%] transition-all duration-700"
       />
@@ -26,7 +25,7 @@ const SkillCard = ({ skill, imageurl, bgcolor }) => {
 export default SkillCard;
 
 SkillCard.propTypes = {
-  skill: PropTypes.node.isRequired,
+  skill: PropTypes.string.isRequired,
   imageurl: PropTypes.object.isRequired,
-  bgcolor: PropTypes.node.isRequired,
+  bgcolor: PropTypes.string.isRequired,
 };
