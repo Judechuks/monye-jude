@@ -98,20 +98,32 @@ const ProjectInfo = () => {
       </div>
 
       {/* Photo Gallery */}
-      <div className="photo-gallery mx-auto grid gap-3 grid-col-1 sm:grid-cols-2">
-        {selectedProject?.photoGallery?.map((photo, index) => (
-          <div
-            key={index}
-            className="cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 group"
-            onClick={() => openLightbox(index)}
-          >
-            <img
-              src={urlFor(photo)}
-              alt={`project thumbnail ${index + 1}`}
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-        ))}
+      <div className="photo-gallery mx-auto grid gap-3 grid-cols-1 sm:grid-cols-2">
+        {selectedProject?.photoGallery?.slice(0, 4).map((photo, index) => {
+          const remainingImages = (selectedProject?.photoGallery?.length || 0) - 4;
+          const isLastItem = index === 3 && remainingImages > 0;
+
+          return (
+            <div
+              key={index}
+              className="relative cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 group aspect-video"
+              onClick={() => openLightbox(index)}
+            >
+              <img
+                src={urlFor(photo)}
+                alt={`project thumbnail ${index + 1}`}
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+              />
+              {isLastItem && (
+                <div className="absolute inset-0 bg-black/60 flex items-center justify-center transition-colors group-hover:bg-black/50">
+                  <span className="text-white text-3xl font-bold">
+                    +{remainingImages}
+                  </span>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       {/* Lightbox Overlay */}
